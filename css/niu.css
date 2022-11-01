@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Noto Sans SC', sans-serif;
+  background-color: #0d0d0d;
+  color: #fff;
+  text-align: center;
+}
+
+p {
+  font-size: 3rem;
+  letter-spacing: 0.25rem;
+}
+
+#niu-content {
+  padding: 1em;
+  margin-bottom: 3em;
+}
+
+@media (max-width: 650px) {
+  p {
+    font-size: 2rem;
+  }
+
+  iframe {
+    width: 480px;
+    height: 270px;
+  }
+}
+
+@media (max-width: 480px) {
+  iframe {
+    width: 320px;
+    height: 180px;
+  }
+}

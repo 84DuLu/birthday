@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Noto Sans SC', sans-serif;
+  background-color: #0d0d0d;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+#typed-content {
+  font-size: 3rem;
+  letter-spacing: 0.25rem;
+  padding: 1em;
+  margin-top: -5em;
+}
+
+.input-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.input-box {
+  position: relative;
+  width: 400px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #0d0d0d;
+  border-radius: 0.5rem;
+  outline: none;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.input-box span {
+  position: absolute;
+  left: 0;
+  padding: 1rem;
+  pointer-events: none;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.25);
+  transition: 0.5s;
+}
+
+.input-box input:valid ~ span,
+.input-box input:focus ~ span {
+  color: #00dfc4;
+  transform: translateX(1rem) translateY(-0.75rem);
+  font-size: 1rem;
+  padding: 0 0.5rem;
+  background: #0d0d0d;
+  border-left: 1px solid #00dfc4;
+  border-right: 1px solid #00dfc4;
+  letter-spacing: 0.1rem;
+}
+
+.input-box input:valid,
+.input-box input:focus {
+  border: 1px solid #00dfc4;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 1.5rem;
+  color: #00dfc4;
+  background-color: #0d0d0d;
+  padding: 0.25em 1em;
+  border: 0.125rem #00dfc4 solid;
+  border-radius: 0.25em;
+  outline: none;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+.btn:hover {
+  text-shadow: 0 0 0.45em currentColor;
+  box-shadow: inset 0 0 0.5em 0 #00dfc4, 0 0 0.5em 0 #00dfc4;
+  transform: scale(1.1);
+}
+
+.btn:active {
+  transform: scale(1);
+}
+
+@media (max-width: 550px) {
+  .input-btn {
+    flex-direction: column;
+  }
+  .input-box {
+    width: 300px;
+  }
+}
+
+@media (max-height: 450px) {
+  #typed-content {
+    margin-top: 0;
+  }
+}
