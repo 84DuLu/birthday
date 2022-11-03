@@ -25,6 +25,10 @@ submitButton.addEventListener('click', () => {
     window.setTimeout(() => {
       location.href = "./friends/gh.html";
     }, 750);
+  } else if (userName.value === '张若楠') {
+    window.setTimeout(() => {
+      location.href = "./friends/ruonan.html";
+    }, 750);
   }
 });
 
