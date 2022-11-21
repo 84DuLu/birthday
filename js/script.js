@@ -17,18 +17,16 @@ function typeText(text) {
 
 submitButton.addEventListener('click', () => {
   buttonClickSound.play();
-  if (userName.value === '牛靖尧') {
-    window.setTimeout(() => {
-      location.href = "./friends/niu.html";
-    }, 750);
-  } else if (userName.value === '郭辉') {
-    window.setTimeout(() => {
-      location.href = "./friends/gh.html";
-    }, 750);
-  } else if (userName.value === '张若楠') {
-    window.setTimeout(() => {
-      location.href = "./friends/ruonan.html";
-    }, 750);
+  let name = userName.value;
+  switch (name) {
+    case '牛靖尧': location.href = "./friends/niu.html";
+                  break;
+    case '郭辉': location.href = "./friends/gh.html";
+                  break;
+    case '张若楠': location.href = "./friends/ruonan.html";
+                  break;
+    case '乔雪飞': location.href = "./friends/qiao.html";
+                  break;
   }
 });
 

@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family: 'Noto Sans SC', sans-serif;
+  text-align: center;
+  color: #fff;
+  background-color: #111827;
+}
+
+h1 {
+  font-size: 4rem;
+  padding: 1rem;
+}
+
+.grid {
+  display: grid;
+  margin: 0 auto;
+  width: 900px;
+  height: 800px;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.grid-plus {
+  width: 480px;
+  height: 480px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../img/siu.gif);
+  background-size: cover;
+}
+
+.messi {
+  background-image: url(../img/messi.jpg);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.cluo {
+  background-image: url(../img/cluo.png);
+  background-size: cover;
+  cursor: not-allowed;
+}
